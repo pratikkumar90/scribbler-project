@@ -1,0 +1,57 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.header-name {
+  float: left;
+}
+
+.header-buttons {
+  float: right;
+  margin: 10px;
+}
+
+.header-body {
+  display: inline-block;
+  margin: 15px;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+}
+
+.site-name {
+  font-family: "Montez", cursive;
+}
+
+.site-sub-heading {
+  font-family: "Ubuntu Mono", cursive;
+}
+
+.btn-primary {
+  margin: 6px;
+}
+
+
+.form-control {
+  background-color: lightgray;
+}
+
+.btn-success-custom {
+  margin-top: 20px;
+}
+
+.sign-in-footer {
+  text-align: center;
+  margin: 8px;
+  font-weight: bold;
+}
