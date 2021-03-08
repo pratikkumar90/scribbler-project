@@ -6,14 +6,8 @@ var deleteIconsArray = Array.from(deleteIcons);
 
 var selectedPost;
 for (var i = 0; i < deleteIconsArray.length; i++) {
-  console.log(
-    "test" +
-      deleteIconsArray[i].parentElement.parentElement.parentElement
-        .parentElement
-  );
   selectedPost =
     deleteIconsArray[i].parentElement.parentElement.parentElement.parentElement;
-
 
   var deletePostModalSpanClose = document.getElementsByClassName(
     "deleteModal-close"
@@ -21,7 +15,6 @@ for (var i = 0; i < deleteIconsArray.length; i++) {
 }
 
 function handleDelete(event) {
-  console.log("Event data=" + event.closest(".post-card"));
   event.preventDefault();
   return false;
 }
@@ -49,19 +42,17 @@ window.onclick = function(event) {
 var selectedPostId;
 
 function handleDelete(id) {
-  console.log("value of id=" + id);
   deletePostModal.style.display = "block";
   selectedPostId = id;
 }
 
-function handleYesButton(){
-    console.log('yes invoked='+selectedPostId);
-    deletePostModal.style.display = "none";
-    var postDiv = document.getElementById(selectedPostId);
-    postDiv.style.display = "none";
-    selectedPostId = undefined;
+function handleYesButton() {
+  deletePostModal.style.display = "none";
+  var postDiv = document.getElementById(selectedPostId);
+  postDiv.style.display = "none";
+  selectedPostId = undefined;
 }
 
-function loadPost(id){
-    window.location.href = "./post.html";
+function loadPost(id) {
+  window.location.href = "./post.html";
 }
