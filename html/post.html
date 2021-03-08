@@ -1,19 +1,239 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
 
-<head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-</head>
-
-<body>
+  <body>
     <!-- TODO: Include code for header here -->
 
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
-    <!-- list of all posts starts here -->
-    Empty post details
-    <!-- list of all posts ends here -->
-</body>
+    <div class="header">
+      <div class="header-body header-name">
+        <h4 class="site-name">ScriBBler</h4>
+        <h5 class="site-sub-heading">Explore, Imagine, Create</h5>
+      </div>
+      <div class="header-body header-buttons">
+        <button id="signUpButton" class="btn btn-primary">
+          Sign Up
+        </button>
 
+        <button id="signInButton" class="btn btn-primary">
+          Sign In
+        </button>
+      </div>
+    </div>
+
+    <div id="signUpModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Get Started</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="signUp-close" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signup-name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signup-username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signup-password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signup-confirmPassword"
+                  placeholder="Re-Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <button
+                  class="btn btn-success btn-block btn-success-custom"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="signInModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Welcome Back!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="signIn-close" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <label for="name">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sign-in-username"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="sign-in-password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <button
+                  class="btn btn-success btn-block btn-success-custom"
+                  type="submit"
+                >
+                  Sign In
+                </button>
+              </div>
+            </form>
+            <div class="sign-in-footer">
+              Not a member?
+              <a id="signUpButtonLink" href="#">
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-wrapper">
+      <div class="title">Post Title</div>
+      <div class="post-header">
+        <span class="name">Author</span>
+        <span class="update-button"
+          ><button
+            class="btn btn-danger saved btn-common"
+            id="editPost"
+            onclick="editText()"
+          >
+            Edit <i class="fa fa-edit"></i></button
+        ></span>
+      </div>
+      <div class="content">
+        Post Content - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec sollicitudin blandit orci ut laoreet. Morbi condimentum
+        pellentesque felis, vitae dapibus tellus eleifend nec. Fusce quis
+        dolorefficitur, condimentum ex et, pulvinar justo. Donec a porttitor
+        eros. Fusce rutrum arcu ac dui porta, eget luctus ligula fringilla.
+        Maecenasmagna quam, elementum id dictum vel, euismod sit amet mi.
+        Vestibulum hendrerit tincidunt ipsum quis varius. Aenean ligula odio,
+        posuere at diam et, ornare pellentesque leo. Ut sit amet sapien sed
+        lacus pretium cursus nec eu metus. Proin dignissim odio et gravida
+        ultricies. Curabitur ligula quam, eleifend quis eros eget, efficitur
+        tristique tortor. Nullam sollicitudin consectetur magna, id faucibus
+        nulla faucibus in. Phasellus orci ipsum, convallis dictum magna ac,
+        gravida porttitor urna. Curabitur sed ligula sed metus fringilla viverra
+        a a velit.
+      </div>
+      <div class="content-likes">
+        <button
+          class="btn btn-danger saved btn-common"
+          id="likeButton"
+          onclick="updateLike()"
+        >
+          Like
+          <i class="fa fa-thumbs-up"></i>
+        </button>
+        <p class="likes-text">Be the first one to like this!</p>
+      </div>
+
+      <div>
+          
+        <textarea
+          name="comment-area"
+          id="commentArea"
+          cols="30"
+          rows="4"
+          placeholder="Leave a comment..."
+        ></textarea>
+        <button
+          class="btn btn-danger saved btn-common"
+          id="likeButton"
+          onclick="saveComment()"
+        >
+          Comment
+        </button>
+      </div>
+    
+      <div class="all-comments hidden">
+
+      </div>
+
+    </div>
+
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+  </body>
 </html>

@@ -63,5 +63,5 @@ function handleYesButton(){
 }
 
 function loadPost(id){
-    window.location.href = "./html/post.html";
+    window.location.href = "./post.html";
 }
