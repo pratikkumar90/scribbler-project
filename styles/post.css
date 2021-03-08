@@ -1,0 +1,55 @@
+.title {
+  text-align: center;
+  font-weight: bold;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.post-wrapper {
+  margin: 40px;
+}
+
+.name {
+  /* margin-left: 40px; */
+  font-size: 20px;
+}
+
+.update-button {
+  float: right;
+}
+
+.post-header {
+  height: 40px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.content-text-area {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.content-likes {
+  margin-top: 20px;
+}
+
+.all-comments {
+  margin-top: 20px;
+  background-color: lightgray;
+  padding: 20px 5px;
+}
+
+.comment-section {
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.hidden {
+  display: none;
+}
