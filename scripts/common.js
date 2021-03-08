@@ -1,4 +1,3 @@
-console.log("sign up clicked");
 // Get the modal
 var signUpModal = document.getElementById("signUpModal");
 
