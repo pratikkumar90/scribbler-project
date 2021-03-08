@@ -1,15 +1,3 @@
-body {
-  background-image: url("../images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
-
-html {
-  height: 100%;
-}
-
 .header-name {
   float: left;
 }
@@ -25,8 +13,8 @@ html {
 }
 
 .header {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
 .site-name {
@@ -40,7 +28,6 @@ html {
 .btn-primary {
   margin: 6px;
 }
-
 
 .form-control {
   background-color: lightgray;

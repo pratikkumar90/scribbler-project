@@ -1,5 +1,3 @@
-
-
 // Get the modal
 var createPostModal = document.getElementById("createPostModal");
 
@@ -10,24 +8,25 @@ var createPostBtn = document.getElementById("createPostButton");
 var createPostButtonLink = document.getElementById("createPostButton");
 
 // Get the <span> element that closes the modal
-var createPostSpanClose = document.getElementsByClassName("createPost-close")[0];
+var createPostSpanClose = document.getElementsByClassName(
+  "createPost-close"
+)[0];
 
 // When the user clicks on the button, open the modal
 createPostBtn.onclick = function() {
-    createPostModal.style.display = "block";
+  createPostModal.style.display = "block";
 };
 
 // When the user clicks on the button, open the modal
 createPostButtonLink.onclick = function() {
-    createPostModal.style.display = "block";
+  createPostModal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
 createPostSpanClose.onclick = function() {
-    createPostModal.style.display = "none";
+  createPostModal.style.display = "none";
 };
 
-
 function displayAllPosts() {
-    window.location.href = "./html/bloglist.html";
+  window.location.href = "./html/postslist.html";
 }
