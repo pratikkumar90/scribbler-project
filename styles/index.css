@@ -1,11 +1,21 @@
-
 .post-body {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-  }
-  
-  .wide {
-      width: 50%;
-  }
-  
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+.wide {
+  width: 50%;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
